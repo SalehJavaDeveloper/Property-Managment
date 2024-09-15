@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Task
+      author: Seymur Ahmadov
+      Comment: Task created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/25.0/liquibase-19.0-ddl.sql

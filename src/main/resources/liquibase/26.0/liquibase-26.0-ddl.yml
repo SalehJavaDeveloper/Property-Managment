@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Transaction
+      author: Altun Tarverdiyev
+      Comment: Transaction created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/26.0/liquibase-26.0-ddl.sql

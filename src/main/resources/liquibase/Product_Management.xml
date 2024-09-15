@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+    <include file="/liquibase/1.0/liquibase-1.0-ddl.yml"/>
+    <include file="/liquibase/2.0/liquibase-2.0-ddl.yml"/>
+    <include file="/liquibase/3.0/liquibase-3.0-ddl.yml"/>
+    <include file="/liquibase/4.0/liquibase-4.0-ddl.yml"/>
+    <include file="/liquibase/5.0/liquibase-5.0-ddl.yml"/>
+    <include file="/liquibase/6.0/liquibase-6.0-ddl.yml"/>
+    <include file="/liquibase/7.0/liquibase-7.0-ddl.yml"/>
+    <include file="/liquibase/8.0/liquibase-8.0-ddl.yml"/>
+    <include file="/liquibase/9.0/liquibase-9.0-ddl.yml"/>
+    <include file="/liquibase/10.0/liquibase-10.0-ddl.yml"/>
+    <include file="/liquibase/11.0/liquibase-11.0-ddl.yml"/>
+    <include file="/liquibase/12.0/liquibase-12.0-ddl.yml"/>
+    <include file="/liquibase/13.0/liquibase-13.0-ddl.yml"/>
+    <include file="/liquibase/14.0/liquibase-14.0-ddl.yml"/>
+    <include file="/liquibase/15.0/liquibase-15.0-ddl.yml"/>
+    <include file="/liquibase/16.0/liquibase-16.0-ddl.yml"/>
+    <include file="/liquibase/17.0/liquibase-17.0-ddl.yml"/>
+    <include file="/liquibase/18.0/liquibase-18.0-ddl.yml"/>
+    <include file="/liquibase/20.0/liquibase-20.0-ddl.yml"/>
+    <include file="/liquibase/21.0/liquibase-21.0-ddl.yml"/>
+    <include file="/liquibase/22.0/liquibase-22.0-ddl.yml"/>
+    <include file="/liquibase/23.0/liquibase-23.0-ddl.yml"/>
+    <include file="/liquibase/24.0/liquibase-24.0-ddl.yml"/>
+    <include file="/liquibase/25.0/liquibase-25.0-ddl.yml"/>
+    <include file="/liquibase/26.0/liquibase-26.0-ddl.yml"/>
+    <include file="/liquibase/27.0/liquibase-27.0-ddl.yml"/>
+    <include file="/liquibase/28.0/liquibase-28.0-ddl.yml"/>
+    <include file="/liquibase/29.0/liquibase-29.0-ddl.yml"/>
+    <include file="/liquibase/30.0/liquibase-30.0-ddl.yml"/>
+    <include file="/liquibase/31.0/liquibase-31.0-ddl.yml"/>
+    <include file="/liquibase/32.0/liquibase-32.0-ddl.yml"/>
+</databaseChangeLog>

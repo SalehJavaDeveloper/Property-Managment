@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Communication Property
+      author: Saleh Allahverdiyev
+      Comment: Communication Property created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/22.0/liquibase-22.0-ddl.sql

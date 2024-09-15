@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Communication Building
+      author: Saleh Allahverdiyev
+      Comment: Communication Building created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/23.0/liquibase-23.0-ddl.sql

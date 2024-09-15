@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create District for property Data
+      author: Saleh Allahverdiyev
+      Comment: Authorities created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/6.0/liquibase-6.0-ddl.sql

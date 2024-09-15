@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Country for property Data
+      author: Saleh Allahverdiyev
+      Comment: Authorities created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/4.0/liquibase-4.0-ddl.sql

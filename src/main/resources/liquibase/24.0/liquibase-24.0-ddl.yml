@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Communication Unit
+      author: Saleh Allahverdiyev
+      Comment: Communication Unit created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/24.0/liquibase-24.0-ddl.sql
