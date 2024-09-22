@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Payment2 table
+      author: Kanan Isakhanli
+      Comment: Payment2 table
+      changes:
+        - sqlFile:
+            path: liquibase/29.0/liquibase-29.0-ddl.sql

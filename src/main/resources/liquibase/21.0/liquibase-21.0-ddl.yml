@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Communication Channel
+      author: Saleh Allahverdiyev
+      Comment: Communication Channel created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/21.0/liquibase-21.0-ddl.sql

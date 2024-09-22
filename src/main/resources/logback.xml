@@ -1,0 +1,91 @@
+<configuration>
+
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"/>
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                ${LOG_PATTERN}
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ROLLING_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>
+            ./logs/info/info-application.log
+        </file>
+        <filter class = "ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <encoder>
+            <pattern>
+                ${LOG_PATTERN}
+            </pattern>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>
+                ./logs/info/info-archive/application-%d{yyyy-MM-dd}-%i.log.zip
+            </fileNamePattern>
+            <maxFileSize>500MB</maxFileSize>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+    </appender>
+<!-- Warning -->
+    <appender name="WARN_ROLLING_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>
+            ./logs/warn/warn-application.log
+        </file>
+        <filter class = "ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>WARN</level>
+        </filter>
+        <encoder>
+            <pattern>
+                ${LOG_PATTERN}
+            </pattern>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>
+                ./logs/warn/warn-archive/warn-application-%d{yyyy-MM-dd}-%i.log.zip
+            </fileNamePattern>
+            <maxFileSize>500MB</maxFileSize>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Warning -->
+    <appender name="ERROR_ROLLING_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>
+            ./logs/error/error-application.log
+        </file>
+        <filter class = "ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <encoder>
+            <pattern>
+                ${LOG_PATTERN}
+            </pattern>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>
+                ./logs/error/error-archive/error-application-%d{yyyy-MM-dd}-%i.log.zip
+            </fileNamePattern>
+            <maxFileSize>500MB</maxFileSize>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="ERROR_ROLLING_FILE"/>
+        <appender-ref ref="ROLLING_FILE"/>
+        <appender-ref ref="Console"/>
+        <appender-ref ref="WARN_ROLLING_FILE"/>
+    </root>
+    <logger name = "com.property.com" level = "DEBUG" additivity = "false">
+        <appender-ref ref="ROLLING_FILE"/>
+        <appender-ref ref="Console"/>
+        <appender-ref ref="WARN_ROLLING_FILE"/>
+        <appender-ref ref="ERROR_ROLLING_FILE"/>
+    </logger>
+</configuration>

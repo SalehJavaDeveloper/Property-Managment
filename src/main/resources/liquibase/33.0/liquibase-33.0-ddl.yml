@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Transaction2 table
+      author: Kanan Isakhanli
+      Comment: Transaction2 table
+      changes:
+        - sqlFile:
+            path: liquibase/33.0/liquibase-33.0-ddl.sql

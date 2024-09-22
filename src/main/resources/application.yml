@@ -1,0 +1,93 @@
+spring:
+  logging:
+    level:
+      ROOT: DEBUG
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: saleh2910
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      minimum-idle: 15
+      maximum-pool-size: 25
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 100
+#        generate_statistics: true
+        order_updates: true
+        order_inserts: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    host: smtp.gmail.com
+    username: atarverdiyev@std.beu.edu.az
+    password: altun9542
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  application:
+    auth-url: "https://test-vpos.unitedpayment.az/api/transactions/create-pay-link"
+    security:
+      jwt:
+        secret-key: 5166546A576E5A7234753778217A25432A462D4A614E645267556B5870327335
+        expiration: 10800000 # 3 hours
+        refresh-token:
+          expiration: 259200000  # 3 days
+  liquibase:
+    enabled: true
+    changeLog: classpath:/liquibase/Product_Management.xml
+    dropFirst: false
+    databaseChangeLogLockTable: PRODUCT_MANAGEMENT_CHANGELOG_LOCK
+    databaseChangeLogTable: PRODUCT_MANAGEMENT_CHANGELOG
+    defaultSchema: public
+  mvc:
+    dispatchOptionsRequest: true
+    cors:
+      enabled: true
+      allowed-origins:
+        - http://173.212.239.87:6464
+      allowed-methods:
+        - GET
+        - POST
+        - PUT
+        - DELETE
+      allowed-headers:
+        - "*"
+      allow-credentials: true
+
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            loggerLevel: full
+
+server:
+  port: 8080
+  servlet:
+   context-path: /property
+
+# config.yml
+credentials:
+  username: user4ab
+  password: Ck0!6AVH27sh!
+  title: SMS TEST
+  mediaFile: C:\Users\user\Desktop\TestingFolder
+
+paymentProvider:
+  yigim:
+    url: https://sandbox.api.pay.yigim.az
+    merchantId: PPM0009
+    apiKey: x"DKC*1D,pEoUQ+mF.oG_4xbz:C5CS$4?Vz*>vs?$Oiqw;IOKrW8oc8@$\noEi$'#`)_sl)oS1?x72"n@1X}dTD8
+    biller: BLR0001
+    template: TPL0001
+    callbackUrl: https://webhook.site/904e9e01-598b-4a81-884e-d1a633c282eb # change
+
+

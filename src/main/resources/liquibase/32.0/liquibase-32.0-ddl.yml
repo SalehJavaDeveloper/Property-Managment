@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Payment Provider table
+      author: Kanan Isakhanli
+      Comment: Payment Provider table
+      changes:
+        - sqlFile:
+            path: liquibase/32.0/liquibase-32.0-ddl.sql

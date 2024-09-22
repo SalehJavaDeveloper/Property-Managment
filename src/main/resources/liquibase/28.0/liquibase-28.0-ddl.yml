@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create MediaFile
+      author: Seymur Ahmadov
+      Comment: MediaFile successfully
+      changes:
+        - sqlFile:
+            path: liquibase/28.0/liquibase-28.0-ddl.sql

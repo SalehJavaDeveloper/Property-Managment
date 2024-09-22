@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Tokens for specify Users in Product Management Application
+      author: Saleh Allahverdiyev
+      Comment: Tokens created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/3.0/liquibase-3.0-ddl.sql

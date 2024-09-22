@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Payment Detailed View
+      author: Kanan Isakhanli
+      Comment: Payment Detailed View
+      changes:
+        - sqlFile:
+            path: liquibase/34.0/liquibase-34.0-ddl.sql

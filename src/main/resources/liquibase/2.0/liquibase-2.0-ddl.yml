@@ -1,0 +1,8 @@
+#databaseChangeLog:
+#  - changeSet:
+#      id: Create Authorities in Product Management Application
+#      author: Saleh Allahverdiyev
+#      Comment: Authorities created successfully
+#      changes:
+#        - sqlFile:
+#            path: liquibase/2.0/liquibase-2.0-ddl.sql

@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Company in Product Management Application
+      author: Saleh Allahverdiyev
+      Comment: Company created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/35.0/liquibase-35.0-ddl.sql

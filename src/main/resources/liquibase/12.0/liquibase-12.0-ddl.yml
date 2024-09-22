@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Unit for property Data
+      author: Saleh Allahverdiyev
+      Comment: Authorities created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/12.0/liquibase-12.0-ddl.sql

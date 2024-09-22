@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create PaymentBuilding for property Data
+      author: Taleh Rzayev
+      Comment: Authorities created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/18.0/liquibase-18.0-ddl.sql

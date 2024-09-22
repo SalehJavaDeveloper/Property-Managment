@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create PaymentServiceType for property Data
+      author: Taleh Rzayev
+      Comment: Authorities created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/15.0/liquibase-15.0-ddl.sql
+  - changeSet:
+      id: Add_payment_date_column_to_payment_table
+      author: Altun Tarverdiyev
+      changes:
+        - addColumn:
+            tableName: payment
+            columns:
+              - column:
+                  name: payment_date
+                  type: DATE
+  - changeSet:
+      id: Add_transaction_id_column_to_payment_table
+      author: Altun Tarverdiyev
+      changes:
+        - addColumn:
+            tableName: payment
+            columns:
+              - column:
+                  name: transaction_id
+                  type: VARCHAR(255)
+
+
+  - changeSet:
+      id: Add_order_id_column_to_payment_table
+      author: Altun Tarverdiyev
+      changes:
+        - addColumn:
+            tableName: payment
+            columns:
+              - column:
+                  name: order_id
+                  type: VARCHAR(255)

@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Village for property Data
+      author: Saleh Allahverdiyev
+      Comment: Authorities created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/7.0/liquibase-7.0-ddl.sql

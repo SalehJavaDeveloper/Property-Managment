@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Task
+      author: Seymur Ahmadov
+      Comment: Task created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/19.0/liquibase-19.0-ddl.sql
+
+  - changeSet:
+      id: AddTaskStatusColumn
+      author: Seymur Ahmadov
+      comment: Add new columns to the task table
+      changes:
+        - addColumn:
+            tableName: task
+            columns:
+              - column:
+                  name: task_status
+                  type: varchar(255)

@@ -1,0 +1,8 @@
+#databaseChangeLog:
+#  - changeSet:
+#      id: Create Payment for property Data
+#      author: Taleh Rzayev
+#      Comment: Authorities created successfully
+#      changes:
+#        - sqlFile:
+#            path: liquibase/27.0/liquibase-35.0-ddl.sql

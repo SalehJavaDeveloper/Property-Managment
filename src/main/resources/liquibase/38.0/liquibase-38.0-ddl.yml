@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Company Roles in Product Manangment Application
+      author: Saleh Allahverdiyev
+      Comment: Company Roles created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/38.0/liquibase-38.0-ddl.sql

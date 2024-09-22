@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Payment General View
+      author: Kanan Isakhanli
+      Comment: Payment General View
+      changes:
+        - sqlFile:
+            path: liquibase/31.0/liquibase-31.0-ddl.sql

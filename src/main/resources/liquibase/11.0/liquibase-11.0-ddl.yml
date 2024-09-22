@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Unit for property Data
+      author: Saleh Allahverdiyev
+      Comment: Authorities created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/11.0/liquibase-11.0-ddl.sql
+
+  - changeSet:
+      id: AddContractTypeColumn
+      author: Seymur Ahmadov
+      comment: Add new columns (contract_type) to the unit table
+      changes:
+        - addColumn:
+            tableName: unit
+            columns:
+              - column:
+                  name: contract_type
+                  type: varchar(255)

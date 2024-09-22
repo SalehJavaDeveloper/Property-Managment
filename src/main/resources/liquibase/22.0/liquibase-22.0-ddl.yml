@@ -1,0 +1,66 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Communication Property
+      author: Saleh Allahverdiyev
+      Comment: Communication Property created successfully
+      changes:
+        - sqlFile:
+            path: liquibase/22.0/liquibase-22.0-ddl.sql
+
+
+
+  - changeSet:
+      id: modify_communication_property_entity
+      author: Seymur Ahmadov
+      changes:
+        # Drop the existing foreign key constraint pm_property
+        - dropForeignKeyConstraint:
+            baseTableName: communication_property
+            constraintName: pm_property
+
+
+  - changeSet:
+      id: modify_communication_property_entity2
+      author: Seymur Ahmadov
+      changes:
+        # Drop the existing foreign key constraint pm_communication
+        - dropForeignKeyConstraint:
+            baseTableName: communication_property
+            constraintName: pm_communication
+
+        # Drop the property_id column
+        - dropColumn:
+            tableName: communication_property
+            columnName: property_id
+
+  - changeSet:
+      id: modify_communication_property_new_relation
+      author: Seymur Ahmadov
+      changes:
+        # Create the new join table communication_prop_property
+        - createTable:
+            tableName: communication_prop_property
+            columns:
+              - column:
+                  name: com_property_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: property_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+            primaryKey:
+              columnNames: com_property_id, property_id
+            foreignKeyConstraints:
+              - foreignKeyConstraint:
+                  baseColumnNames: com_property_id
+                  baseTableName: communication_property
+                  referencedColumnNames: id
+                  referencedTableName: communication_property
+              - foreignKeyConstraint:
+                  baseColumnNames: property_id
+                  baseTableName: property
+                  referencedColumnNames: id
+                  referencedTableName: property
